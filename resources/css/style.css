@@ -5,6 +5,7 @@ body {
 .title{
   color: #51825A;
 }
+
 table {
   background: #1E1E1E;
   border-radius: 0.25em;
@@ -14,7 +15,6 @@ table {
 th {
   border-bottom: 1px solid #364043;
   color: #51825A;
-;
   font-size: 0.85em;
   font-weight: 600;
   padding: 0.5em 1em;
@@ -40,4 +40,7 @@ td {
 .button-order, .button-portfolio:hover {
   background-color: #51825A;
   color: white;
+}
+.test {
+  color: red;
 }

@@ -12,7 +12,6 @@ class Portfolio {
         $pdo = getConnection();
         $stmt = $pdo->prepare('SELECT * FROM user_portfolio WHERE account_number = :account_number');
         $stmt->execute(['account_number' => $account_number]);
-        print $account_number;
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

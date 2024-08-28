@@ -7,6 +7,7 @@ $userlist = $GLOBALS['userlist'];
 <html>
 <head>
     <title>Users</title>
+    <link rel="stylesheet" href="resources\css\style.css">
 </head>
 <body>
     <h1 class="title">Users</h1>
