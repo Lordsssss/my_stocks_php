@@ -1,14 +1,6 @@
 <?php
 
-require_once 'models/stocks.php';
-require_once 'models/users.php';
+require 'Framework/Routeur.php';
 
-
-// Fetch all stock prices
-$stockPrices = Stock::getAllPrices();
-$userlist = UserList::getAllUserList();
-
-// Pass stock prices to the view
-require 'views/stocks_list.php';
-require 'views/add_stock.php';
-require 'views/user_list.php';
+$routeur = new Routeur();
+$routeur->routerRequete();

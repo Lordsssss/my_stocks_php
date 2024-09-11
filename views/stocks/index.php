@@ -1,7 +1,4 @@
-<?php
-$stockPrices = $GLOBALS['stockPrices'];
-
-?>
+<?php $this->titre = 'My Stocks'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +14,7 @@ $stockPrices = $GLOBALS['stockPrices'];
             <th>Name</th>
             <th>Price</th>
         </tr>
-        <?php foreach ($stockPrices as $price): ?>
+        <?php foreach ($stocks as $price): ?>
         <tr>
             <td><?= $price['stock_symbol'] ?></td>
             <td><?= $price['stock_name'] ?></td>
