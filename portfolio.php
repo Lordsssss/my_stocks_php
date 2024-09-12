@@ -8,8 +8,6 @@ $portfolio = Portfolio::getPortfolioById($account_number);
 <html>
 <head>
     <title>Portfolio</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 </head>
 <body>
     <h1 class="title">Stock Prices</h1>

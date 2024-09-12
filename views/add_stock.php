@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Add New Stock</title>
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 </head>
 <body>
 

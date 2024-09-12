@@ -1,55 +1,54 @@
 <?php
 
 /**
- * Classe de gestion des paramètres de configuration
+ * Class for managing configuration parameters
  * 
- * Inspirée du SimpleFramework de Frédéric Guillot
+ * Inspired by SimpleFramework by Frédéric Guillot
  * (https://github.com/fguillot/simpleFramework)
  *
  * @version 1.0
- * @author Baptiste Pesquet
+ * @autor Baptiste Pesquet
  */
 class Configuration {
 
-    /** Tableau des paramètres de configuration */
-    private static $parametres;
+    /** Array of configuration parameters */
+    private static $parameters;
 
     /**
-     * Renvoie la valeur d'un paramètre de configuration
+     * Returns the value of a configuration parameter
      * 
-     * @param string $nom Nom du paramètre
-     * @param string $valeurParDefaut Valeur à renvoyer par défaut
-     * @return string Valeur du paramètre
+     * @param string $name Name of the parameter
+     * @param string $defaultValue Default value to return
+     * @return string Value of the parameter
      */
-    public static function get($nom, $valeurParDefaut = null) {
-        if (isset(self::getParametres()[$nom])) {
-            $valeur = self::getParametres()[$nom];
+    public static function get($name, $defaultValue = null) {
+        if (isset(self::getParameters()[$name])) {
+            $value = self::getParameters()[$name];
         } else {
-            $valeur = $valeurParDefaut;
+            $value = $defaultValue;
         }
-        return $valeur;
+        return $value;
     }
 
     /**
-     * Renvoie le tableau des paramètres en le chargeant au besoin depuis un fichier de configuration.
-     * Les fichiers de configuration recherchés sont Config/dev.ini et Config/prod.ini (dans cet ordre)
+     * Returns the array of parameters, loading it if necessary from a configuration file.
+     * The configuration files searched are Config/dev.ini and Config/prod.ini (in that order)
      * 
-     * @return array Tableau des paramètres
-     * @throws Exception Si aucun fichier de configuration n'est trouvé
+     * @return array Array of parameters
+     * @throws Exception If no configuration file is found
      */
-    private static function getParametres() {
-        if (self::$parametres == null) {
-            $cheminFichier = "Config/dev.ini";
-            if (!file_exists($cheminFichier)) {
-                $cheminFichier = "Config/prod.ini";
+    private static function getParameters() {
+        if (self::$parameters == null) {
+            $filePath = "Config/dev.ini";
+            if (!file_exists($filePath)) {
+                $filePath = "Config/prod.ini";
             }
-            if (!file_exists($cheminFichier)) {
-                throw new Exception("Aucun fichier de configuration trouvé");
+            if (!file_exists($filePath)) {
+                throw new Exception("No configuration file found");
             } else {
-                self::$parametres = parse_ini_file($cheminFichier);
+                self::$parameters = parse_ini_file($filePath);
             }
         }
-        return self::$parametres;
+        return self::$parameters;
     }
-
 }

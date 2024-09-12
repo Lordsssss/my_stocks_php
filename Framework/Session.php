@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Classe modélisant la session.
- * Encapsule la superglobale PHP $_SESSION.
+ * Class modeling the session.
+ * Encapsulates the PHP superglobal $_SESSION.
  * 
  * @author Baptiste Pesquet
  */
@@ -10,8 +10,8 @@ class Session
 {
 
     /**
-     * Constructeur.
-     * Démarre ou restaure la session
+     * Constructor.
+     * Starts or resumes the session
      */
     public function __construct()
     {
@@ -19,49 +19,49 @@ class Session
     }
 
     /**
-     * Détruit la session actuelle
+     * Destroys the current session
      */
-    public function detruire()
+    public function destroy()
     {
         session_destroy();
     }
 
     /**
-     * Ajoute un attribut à la session
+     * Adds an attribute to the session
      * 
-     * @param string $nom Nom de l'attribut
-     * @param string $valeur Valeur de l'attribut
+     * @param string $name Attribute name
+     * @param string $value Attribute value
      */
-    public function setAttribut($nom, $valeur)
+    public function setAttribute($name, $value)
     {
-        $_SESSION[$nom] = $valeur;
+        $_SESSION[$name] = $value;
     }
 
     /**
-     * Renvoie vrai si l'attribut existe dans la session
+     * Returns true if the attribute exists in the session
      * 
-     * @param string $nom Nom de l'attribut
-     * @return bool Vrai si l'attribut existe et sa valeur n'est pas vide 
+     * @param string $name Attribute name
+     * @return bool True if the attribute exists and its value is not empty 
      */
-    public function existeAttribut($nom)
+    public function hasAttribute($name)
     {
-        return (isset($_SESSION[$nom]) && $_SESSION[$nom] != "");
+        return (isset($_SESSION[$name]) && $_SESSION[$name] != "");
     }
 
     /**
-     * Renvoie la valeur de l'attribut demandé
+     * Returns the value of the requested attribute
      * 
-     * @param string $nom Nom de l'attribut
-     * @return string Valeur de l'attribut
-     * @throws Exception Si l'attribut n'existe pas dans la session
+     * @param string $name Attribute name
+     * @return string Attribute value
+     * @throws Exception If the attribute does not exist in the session
      */
-    public function getAttribut($nom)
+    public function getAttribute($name)
     {
-        if ($this->existeAttribut($nom)) {
-            return $_SESSION[$nom];
+        if ($this->hasAttribute($name)) {
+            return $_SESSION[$name];
         }
         else {
-            throw new Exception("Attribut '$nom' absent de la session");
+            throw new Exception("Attribute '$name' missing from the session");
         }
     }
 

@@ -1,12 +1,5 @@
-<?php $this->titre = 'My Stocks'; ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Stock Prices</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-</head>
-<body>
+<?php $this->title = 'My Stocks'; ?>
+<section id="stocks"
     <h1 class="title">Stock Prices</h1>
     <table class="table">
         <tr>
@@ -19,9 +12,8 @@
             <td><?= $price['stock_symbol'] ?></td>
             <td><?= $price['stock_name'] ?></td>
             <td><?= $price['current_price'] ?></td>
-            <td><button class="button button-order">Placer un ordre</button></td>
+            <td><button class="button button-order">Place an Order</button></td>
         </tr>
         <?php endforeach; ?>
     </table>
-</body>
-</html>
+</section>

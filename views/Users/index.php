@@ -1,15 +1,5 @@
-<?php
-
-$userlist = $GLOBALS['userlist'];
-
-?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Users</title>
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-</head>
-<body>
+<?php $this->title = 'Users'; ?>\
+<section id="users">
     <h1 class="title">Users</h1>
     <table>
         <tr>
@@ -18,7 +8,7 @@ $userlist = $GLOBALS['userlist'];
             <th>Email</th>
             <th>Creation Date</th>
         </tr>
-        <?php foreach ($userlist as $user): ?>
+        <?php foreach ($users as $user): ?>
         <tr>
             <td><?= $user['account_number'] ?></td>
             <td><?= $user['username'] ?></td>
@@ -28,5 +18,4 @@ $userlist = $GLOBALS['userlist'];
         </tr>
         <?php endforeach; ?>
     </table>
-</body>
-</html>
+</section>
