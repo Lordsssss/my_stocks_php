@@ -16,7 +16,7 @@ table {
   border-radius: 0.25em; /* Rounded corners */
   border-collapse: collapse; /* Collapse borders */
   margin: 1em; /* Margin outside the table */
-  height: 500px; /* Fixed height */
+  height:max-content; /* Fixed height */
   overflow-y: scroll; /* Vertical scroll */
 }
 
@@ -236,4 +236,7 @@ nav ul li a:hover {
   nav ul {
     display: none;
   }
+}
+.error{
+  color: white;
 }

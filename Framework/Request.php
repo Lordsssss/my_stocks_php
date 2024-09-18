@@ -53,11 +53,12 @@ class Request {
      * @throws Exception If the parameter does not exist in the request
      */
     public function getParameter($name) {
-        if ($this->hasParameter($name)) {
+        echo "<script>console.log('Parameters: " . json_encode($this->parameters) . "');</script>";
+        // if ($this->hasParameter($name)) {
             return $this->parameters[$name];
-        } else {
-            throw new Exception("Parameter '$name' missing from the request");
-        }
+        // } else {
+        //     throw new Exception("Parameter '$name' missing from the request");
+        // }
     }
 
     /**

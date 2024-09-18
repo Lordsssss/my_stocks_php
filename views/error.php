@@ -1,3 +1,3 @@
 <?php $title = 'Error'; ?>
 
-<p>An error occurred: <?= $errorMsg ?></p>
+<p class="error" >An error occurred: <?= $errorMsg ?></p>

@@ -1,15 +1,5 @@
-<?php
-require 'models/user_portfolio.php';
-
-$account_number = isset($_GET['account_number']) ? $_GET['account_number'] : null;
-$portfolio = Portfolio::getPortfolioById($account_number);
-?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Portfolio</title>
-</head>
-<body>
+<?php $this->title = 'portfolio'; ?>
+<section id="stocks"
     <h1 class="title">Stock Prices</h1>
     <table class="table">
         <tr>
@@ -25,5 +15,4 @@ $portfolio = Portfolio::getPortfolioById($account_number);
         </tr>
         <?php endforeach; ?>
     </table>
-</body>
-</html>
+</section>

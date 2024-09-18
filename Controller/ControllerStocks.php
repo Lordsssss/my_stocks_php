@@ -24,4 +24,8 @@ class ControllerStocks extends Controller {
         $this->stock->addStock($stock);
         $this->executeAction('index');
     }
+
+    public function addStock() {
+        $this->generateView();
+    }
 }

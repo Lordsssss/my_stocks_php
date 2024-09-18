@@ -45,6 +45,11 @@
             <li><a href="<?= $webRoot ?>">Stock</a></li>
         </ul>
     </div>
+    <div class="menubar">
+        <ul>
+            <li><a href="<?= $webRoot ?>">Users</a></li>
+        </ul>
+    </div>
     <div id="content">
         <?= $content ?> <!-- Specific element -->
     </div>

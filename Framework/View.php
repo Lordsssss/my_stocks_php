@@ -48,7 +48,9 @@ class View {
         $view = $this->generateFile('views/template.php',
                 array('title' => $this->title, 'content' => $content,
                     'webRoot' => $webRoot,
-                    'message' => $data['message']));
+                   // 'message' => $data['message']
+                   )
+                );
         // Return the generated view to the browser
         echo $view;
     }

@@ -14,7 +14,7 @@
             <td><?= $user['username'] ?></td>
             <td><?= $user['email'] ?></td>
             <td><?= $user['created_at'] ?></td>
-            <td><a class="button button-portfolio" href="portfolio.php?account_number=<?= $user['account_number']?>">See Portfolio</a></td>
+            <td><a class="button button-portfolio" href="ControllerPortfolios/portfolio/<?= $this->clean($user['account_number']) ?>" >See Portfolio</a></td>
         </tr>
         <?php endforeach; ?>
     </table>
