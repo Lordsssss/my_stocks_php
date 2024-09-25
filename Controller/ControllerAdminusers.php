@@ -1,9 +1,9 @@
 <?php
 
-require_once 'Model/users.php';
-require_once 'Framework/Controller.php';
+require_once 'Model/User.php';
+require_once 'Controller/ControllerAdmin.php';
 
-class ControllerUsers extends Controller {
+class ControllerAdminUsers extends ControllerAdmin {
 
     private $user;
 

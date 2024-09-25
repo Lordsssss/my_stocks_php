@@ -12,7 +12,7 @@ require_once 'View.php';
  * (https://github.com/ndavison/Nathan-MVC)
  * 
  * @version 1.0
- * @author Baptiste Pesquet
+ * @authored by Baptiste Pesquet
  */
 
 class Router {
@@ -47,6 +47,9 @@ class Router {
         // Thanks to redirection, all incoming URLs are of the type:
         // index.php?controller=XXX&action=YYY&id=ZZZ
         $defaultController = Configuration::get("default");
+        if ($request->getSession()->hasAttribute("user")) {
+            $defaultController = 'Admin' . $defaultController;
+        }
         $controller = $defaultController;  // Default controller
         if ($request->hasParameter('controller')) {
             $controller = $request->getParameter('controller');
@@ -94,3 +97,4 @@ class Router {
     }
 
 }
+?>

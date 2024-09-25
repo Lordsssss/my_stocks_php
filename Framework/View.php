@@ -6,7 +6,7 @@ require_once 'Configuration.php';
  * Class modeling a view
  *
  * @version 1.0
- * @author Baptiste Pesquet
+ * @authored by Baptiste Pesquet
  */
 class View {
 
@@ -38,6 +38,7 @@ class View {
      * @param array $data Data needed for generating the view
      */
     public function generate($data) {
+        echo "<script>console.log('request: " . json_encode($data) . "');</script>";
         // Generate the specific part of the view
         $content = $this->generateFile($this->file, $data);
         // Define a local variable accessible by the view for the web root
@@ -45,12 +46,16 @@ class View {
         // Necessary for URIs of the type controller/action/id
         $webRoot = Configuration::get("webRoot", "/");
         // Generate the common template using the specific part
-        $view = $this->generateFile('views/template.php',
-                array('title' => $this->title, 'content' => $content,
-                    'webRoot' => $webRoot,
-                   // 'message' => $data['message']
-                   )
-                );
+        $viewData = [
+            'title' => $this->title,
+            'content' => $content,
+            'webRoot' => $webRoot,
+        ];
+        // Add the user in session if applicable
+        if (isset($data['users'])) {
+            $viewData['user'] = $data['users'];
+        }
+        $view = $this->generateFile('views/template.php', $viewData);
         // Return the generated view to the browser
         echo $view;
     }
@@ -74,8 +79,7 @@ class View {
             require $file;
             // Stop buffering and return the output buffer
             return ob_get_clean();
-        }
-        else {
+        } else {
             throw new Exception("File '$file' not found");
         }
     }
@@ -92,3 +96,4 @@ class View {
     }
 
 }
+?>

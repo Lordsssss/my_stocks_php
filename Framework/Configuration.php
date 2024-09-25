@@ -7,7 +7,7 @@
  * (https://github.com/fguillot/simpleFramework)
  *
  * @version 1.0
- * @autor Baptiste Pesquet
+ * @authored by Baptiste Pesquet
  */
 class Configuration {
 
@@ -52,3 +52,4 @@ class Configuration {
         return self::$parameters;
     }
 }
+?>

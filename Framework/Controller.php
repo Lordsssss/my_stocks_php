@@ -8,7 +8,7 @@ require_once 'View.php';
  * Provides common services to derived Controller classes
  * 
  * @version 1.0
- * @author Baptiste Pesquet
+ * @authored by Baptiste Pesquet
  */
 abstract class Controller {
 
@@ -88,3 +88,4 @@ abstract class Controller {
     }
 
 }
+?>

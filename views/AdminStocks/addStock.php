@@ -2,7 +2,7 @@
 <section class="addStock">
     <h1 class="title">Add New Stock</h1>
     <div class="form-container">
-        <form class="form form-add-stock" action="ControllerStocks/add" method="post">
+        <form class="form form-add-stock" action="ControllerAdminStocks/add" method="post">
             <div class="field-container">
                 <label for="stock_name">Stock Name</label>
                 <input type="text" name="stock_name" id="stock_name" maxlength="20">
