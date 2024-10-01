@@ -1,5 +1,9 @@
 <?php $this->title = 'My Stocks'; ?>
 <section class="addStock">
+    <style>
+        <?php include 'Content/css/stock.css'; ?>
+    </style>
+    <link rel="stylesheet" href="./Content/css/stock.css">
     <h1 class="title">Add New Stock</h1>
     <div class="form-container">
         <form class="form form-add-stock" action="ControllerAdminStocks/add" method="post">

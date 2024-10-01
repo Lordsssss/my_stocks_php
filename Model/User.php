@@ -13,7 +13,18 @@ class User extends Model {
         $users = $this->executeQuery($sql);
         return $users;
     }
-
+    /**
+     * Retrieves a user by their ID
+     * 
+     * @param int $account_number The user ID
+     * @return mixed The user data
+     * @throws Exception If no user matches the provided ID
+     */
+    public function getUserByAccountNumber($account_number) {
+        $sql = "SELECT * FROM users WHERE account_number=?";
+        $user = $this->executeQuery($sql, [$account_number]);
+        return $user->fetch();
+    }
     /**
      * Checks if a user exists in the database
      * 
@@ -43,6 +54,20 @@ class User extends Model {
             return $user->fetch();  // Access the first result row
         else
             throw new Exception("No user matches the provided credentials");
+    }
+
+    /**
+     * Updates the username and email of a user
+     * 
+     * @param int $userId The user ID
+     * @param string $newUsername The new username
+     * @param string $newEmail The new email
+     * @return boolean True if the update was successful, false otherwise
+     */
+    public function updateUser($account_number, $newUsername, $newEmail) {
+        $sql = "UPDATE users SET username = ?, email = ? WHERE account_number = ?";
+        $result = $this->executeQuery($sql, [$newUsername, $newEmail, $account_number]);
+        return ($result->rowCount() == 1);
     }
 }
 ?>

@@ -1,5 +1,9 @@
 <?php $this->title = 'portfolio'; ?>
-<section id="stocks"
+<section id="portfolio">
+    <style>
+        <?php include 'Content/css/portfolio.css'; ?>
+    </style>
+    <link rel="stylesheet" href="./Content/css/portfolio.css">
     <h1 class="title">Stock Prices</h1>
     <table class="table">
         <tr>

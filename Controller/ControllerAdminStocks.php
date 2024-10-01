@@ -24,6 +24,21 @@ class ControllerAdminStocks extends ControllerAdmin {
         $this->stock->addStock($stock);
         $this->executeAction('index');
     }
+    public function confirmation() {
+        $stock_id = $this->request->getParameterId('id');
+        $stock = $this->stock->getStockById($stock_id);
+        $this->generateView(["stock"=> $stock]);
+    }
+    public function delete() {
+        $stock_id = $this->request->getParameter('id');
+        $this->stock->deleteStock($stock_id);
+        $this->executeAction('index');
+    }
+    public function restore() {
+        $stock_id = $this->request->getParameter('id');
+        $this->stock->restoreStock($stock_id);
+        $this->executeAction('index');
+    }
 
     public function addStock() {
         $this->generateView();

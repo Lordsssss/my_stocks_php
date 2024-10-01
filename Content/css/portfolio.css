@@ -1,0 +1,25 @@
+
+  table {
+    background: #1E1E1E; /* Background color */
+    border-radius: 0.25em; /* Rounded corners */
+    border-collapse: collapse; /* Collapse borders */
+    margin: 1em; /* Margin outside the table */
+    height:max-content; /* Fixed height */
+    overflow-y: scroll; /* Vertical scroll */
+  }
+  
+  th {
+    border-bottom: 1px solid #364043; /* Bottom border */
+    color: #02AC63; /* Text color */
+    font-size: 0.85em; /* Font size */
+    font-weight: 600; /* Font weight */
+    padding: 0.5em 1em; /* Padding inside the header cell */
+    text-align: left; /* Left-aligned text */
+  }
+  
+  td {
+    color: #fff; /* Text color */
+    font-weight: 400; /* Font weight */
+    padding: 0.65em 1em; /* Padding inside the cell */
+  }
+  

@@ -38,7 +38,7 @@ class View {
      * @param array $data Data needed for generating the view
      */
     public function generate($data) {
-        echo "<script>console.log('request: " . json_encode($data) . "');</script>";
+        echo "<script>console.log('data: " . json_encode($data) . "');</script>";
         // Generate the specific part of the view
         $content = $this->generateFile($this->file, $data);
         // Define a local variable accessible by the view for the web root
@@ -52,8 +52,8 @@ class View {
             'webRoot' => $webRoot,
         ];
         // Add the user in session if applicable
-        if (isset($data['users'])) {
-            $viewData['user'] = $data['users'];
+        if (isset($data['user'])) {
+            $viewData['user'] = $data['user'];
         }
         $view = $this->generateFile('views/template.php', $viewData);
         // Return the generated view to the browser

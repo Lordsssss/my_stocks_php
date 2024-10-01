@@ -18,11 +18,6 @@
                 <td><?= $user['username'] ?></td>
                 <td><?= $user['email'] ?></td>
                 <td><?= $user['created_at'] ?></td>
-                <td><a class="button button-portfolio"
-                        href="ControllerPortfolios/portfolio/<?= $this->clean($user['account_number']) ?>">See Portfolio</a>
-                </td>
-                <td> <a href="ControllerAdminUsers/updateUser/<?= $this->clean($user['account_number']) ?>">Update User</a>
-                </td>
             </tr>
         <?php endforeach; ?>
     </table>

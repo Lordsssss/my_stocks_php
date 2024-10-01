@@ -1,16 +1,17 @@
 
 <section id="connection">
-    <style><?php include '/Content/css/connection.css'; ?></style>
+    <style><?php include 'Content/css/connection.css'; ?></style>
+    <link rel="stylesheet" href="./Content/css/connection.css">
     <h2 class="title">Login Page</h2>
-    <div className="login">
+    <div class="login">
     <form action="ControllerConnection/login" method="post">
         <div>
-            <label className="labellog" for="login">Username:</label>
-            <input className="inputlog" type="text" id="login" name="login" required>
+            <label class="labellog" for="login">Username:</label>
+            <input class="inputlog" type="text" id="login" name="login" required>
         </div>
         <div>
-            <label className="labellog" for="password">Password:</label>
-            <input className="inputlog" type="password" id="password" name="password" required>
+            <label class="labellog" for="password">Password:</label>
+            <input class="inputlog" type="password" id="password" name="password" required>
         </div>
         <div>
             <button type="submit">Login</button>

@@ -1,0 +1,64 @@
+
+  table {
+    background: #1E1E1E; /* Background color */
+    border-radius: 0.25em; /* Rounded corners */
+    border-collapse: collapse; /* Collapse borders */
+    margin: 1em; /* Margin outside the table */
+    height:max-content; /* Fixed height */
+    overflow-y: scroll; /* Vertical scroll */
+  }
+  
+  th {
+    border-bottom: 1px solid #364043; /* Bottom border */
+    color: #02AC63; /* Text color */
+    font-size: 0.85em; /* Font size */
+    font-weight: 600; /* Font weight */
+    padding: 0.5em 1em; /* Padding inside the header cell */
+    text-align: left; /* Left-aligned text */
+  }
+  
+  td {
+    color: #fff; /* Text color */
+    font-weight: 400; /* Font weight */
+    padding: 0.65em 1em; /* Padding inside the cell */
+  }
+  
+  .button {
+    font-size: 0.80em; /* Font size */
+    display: inline-block; /* Inline block display */
+    text-decoration: none; /* No text decoration */
+    border-radius: 0.30em; /* Rounded corners */
+    padding: 0.50em; /* Padding inside the button */
+  }
+  .form-container {
+    background: #1E1E1E; /* Background color */
+    border-radius: 0.25em; /* Rounded corners */
+    display: grid; /* Use grid layout */
+    grid-column-gap: 10px; /* Gap between columns */
+    grid-template-columns: auto auto; /* Two columns with automatic width */
+    grid-template-rows: 90px 90px 90px; /* Three rows, each 90px high */
+    grid-template-areas: 
+      "name name"
+      "number number"
+      "expiration security"; /* Define grid areas */
+    max-width: 400px; /* Maximum width */
+    padding: 20px; /* Padding inside the element */
+    color: #707070; /* Text color */
+    margin: 1em; /* Margin outside the element */
+  }
+  
+  .form-container button {
+    padding: 0.80em; /* Padding inside the button */
+    margin: 0.80em; /* Margin outside the button */
+  }
+
+  .button-order:hover {
+    background-color: #364043; /* Background color */
+    color: #02AC63; /* Text color */
+    border: 0.20em #02AC63 solid; /* Border with color */
+  }
+
+  .button-order{
+    background-color: #02AC63; /* Background color */
+    color: white; /* Text color */
+  }
