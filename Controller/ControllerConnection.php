@@ -35,7 +35,7 @@ class ControllerConnection extends Controller {
                 $this->redirect("ControllerAdminUsers");
             } else {
                 $this->request->getSession()->setAttribute('error', 'password');
-                $this->redirect('ControllerAbout');
+                $this->redirect('ControllerConnection');
             }
         } else {
             throw new Exception("Action impossible: login or password not defined");

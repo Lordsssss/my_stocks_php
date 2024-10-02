@@ -75,6 +75,9 @@
     </div>
     <footer>
         <p>&copy; 2023 WorkForce. All rights reserved.</p>
+        <a href="tests.php">
+                    <h3>TESTS</h3>
+                </a>
     </footer>
 </body>
 

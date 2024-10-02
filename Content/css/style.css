@@ -51,7 +51,9 @@ footer {
   color: #ffffff; /* Text color */
   text-align: center; /* Centered text */
   padding: 10px 0; /* Padding inside the footer */
-  position: fixed;
+  position: absolute;
+  top: calc(540px + ((100vh - 650px) / 2));
+  margin-top: 100px;
   left: 0;
   bottom: 0;
   width: 100%;

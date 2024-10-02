@@ -19,7 +19,7 @@ abstract class ControllerAdmin extends Controller {
             $this->user = $this->request->getSession()->getAttribute("user");
             parent::executeAction($action);
         } else {
-            $this->redirect('About');
+            $this->redirect('ControllerConnection');
         }
     }
 

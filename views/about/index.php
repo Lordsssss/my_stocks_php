@@ -1,5 +1,9 @@
 <?php $this->title = 'About'; ?>
 <section id="about">
+    <style>
+        <?php include 'Content/css/about.css'; ?>
+    </style>
+    <link rel="stylesheet" href="./Content/css/about.css">
     <header>
         <h1>About My Stocks App</h1>
     </header>

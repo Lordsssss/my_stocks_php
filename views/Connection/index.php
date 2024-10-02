@@ -16,6 +16,7 @@
         <div>
             <button type="submit">Login</button>
         </div>
+        <?= ($error == 'password') ? '<span style="color : red;">Login ou mot de passe incorrects</span>' : '' ?> 
     </form>
     </div>
 </section>
